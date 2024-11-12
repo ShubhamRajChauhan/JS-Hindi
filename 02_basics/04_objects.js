@@ -71,5 +71,39 @@ console.log(tinderUser.hasOwnProperty('isLoggedIn')); //true
 console.log(tinderUser.hasOwnProperty('isLogged')); //false
 
 
+//--------------------------------------------------------------------------------------------------------------------------------
+//Lec 18: Object de-structure and JSON API intro
+
+
+//Destructing  of object
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+// or
+const {courseInstructor: instructor} = course //courseInstructor: instructor  , ab instructor courseInstructor ho gya hai , called destructure of object
+//console.log(courseInstructor);
+console.log(instructor);
+
+
+
+//-------------API concept-----------------
+//How JSON looks:
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",     //(both keys and values are in string)
+//     "price": "free"
+// }
+
+
+//or we can get the api in arrays format
+[
+    {},
+    {},
+    {}
+]
 
 
