@@ -52,3 +52,55 @@ function loginUserMessage(username = "sam") {
 console.log(loginUserMessage()) 
 
  
+
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//Lec 20: Functions with objects and array in javascript
+/*
+function calculateCartPrice(...num1){  //...num1 = [ 200, 400, 500 ], give like this
+    return num1
+}
+
+console.log(calculateCartPrice(200, 400, 500));
+*/
+
+
+
+function calculateCartPrice(val1, val2, ...num1){  
+    return num1
+}
+
+console.log(calculateCartPrice(200, 400, 500, 2000)); //will give [ 500, 2000 ] ,because val1 takes the value 200 and val2 takes the value 400
+
+
+
+//using object
+const user = {
+    username: "shubham",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+// handleObject(user)
+//(or)
+handleObject({
+    username: "sam",
+    price: 399
+})
+
+
+
+//using arrays
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray));
+//(or)
+console.log(returnSecondValue([200, 400, 500, 1000]));
