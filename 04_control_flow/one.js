@@ -1,4 +1,4 @@
-//Lec 26: Control flow in javascript 
+//Lec 26: Control flow in javascript  (Parrt 1)
 
 
 // <, >, <=, >=, ==, !=, ===, !==
