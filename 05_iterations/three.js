@@ -28,7 +28,7 @@ for (const greet of greetings) {
 
 
 
-//----------Maps-------------  -> hold key value pair , no duplicate value , all values are unique
+//----------Maps-------------  -> hold key value pair , no duplicate value , all values are unique, not itteratable
 const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United Stated of America")
