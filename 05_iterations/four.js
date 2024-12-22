@@ -43,4 +43,4 @@ for (const key in map) {
 */
 
 
-//NOTE: mainly for array we use for of loop & for object we use for in
+//NOTE:  for array we use for of loop but mainly for each & for object we use for in
