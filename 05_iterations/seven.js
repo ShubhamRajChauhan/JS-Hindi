@@ -1,4 +1,5 @@
 //Lec 30: Filter map and reduce in javascript(Part: 2)
+//----------------------Map---------------------------------------
 
 const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
