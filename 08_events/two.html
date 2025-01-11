@@ -1,0 +1,52 @@
+<!-- Lec 38: 2 projects with Async JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    /*
+    setTimeout(function(){
+        console.log("Shubham")
+    }, 2000)  //2000ms ke baad aapka naam print ho jayega
+    */
+
+
+    /*
+    const sayShubham = function(){
+        console.log("Shubham")
+    }
+    setTimeout(sayShubham, 2000) //2000ms ke baad aapka naam print ho jayega
+    */
+
+
+
+    /*
+    const changeText = function(){
+        document.querySelector('h1').innerHTML
+        = "best JS series"
+    }
+    setTimeout(changeText, 2000) //2000ms ke baad Chai aur code se naam change ho kar best JS series ho jayega
+    */
+    
+
+    //agr button click hoga 2000ms se pehle to inner html change nhi hoga
+    const changeText = function(){
+        document.querySelector('h1').innerHTML
+        = "best JS series"
+    }
+    const changeMe = setTimeout(changeText, 2000) 
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
