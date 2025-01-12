@@ -1,0 +1,53 @@
+<!-- Lec 38: 2 projects with Async JS -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    /*
+    setInterval(function(){
+        console.log("Shubham", Date.now())  //we write date.now just to see more clear
+    }, 1000)   //har 1 sec. ke baad Shubham print karwayega
+    */
+
+
+    /*
+    const sayDate = function(str){
+        console.log(str, Date.now())
+    }
+    setInterval(sayDate, 1000, "hi")   //har 1 sec. ke baad print karwayega
+    */
+    
+    
+    /*
+    const sayDate = function(str){
+        console.log(str, Date.now())
+    }
+    const IntervalId = setInterval(sayDate, 1000, "hi")   
+    
+    clearInterval(IntervalId)  // to stop the interval
+    */
+
+
+    const sayDate = function(str){
+        console.log(str, Date.now())
+    }
+    const IntervalId = setInterval(sayDate, 1000, "hi")   
+    
+    clearInterval(IntervalId)  // stop
+
+    //start button pr click karun yo printing start ho jaye aur stop button click karun to stop v ho jaye
+</script>
+</html>
