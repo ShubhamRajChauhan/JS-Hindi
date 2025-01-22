@@ -14,7 +14,6 @@ promiseOne.then(function () {  //connected to resolve means (resolve and then ar
 })
 
 
-
 //(or)
 new Promise(function (resolve, reject) {
     setTimeout(function () {
