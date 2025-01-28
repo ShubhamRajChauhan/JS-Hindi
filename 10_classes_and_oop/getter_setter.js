@@ -1,4 +1,4 @@
-//Lec 48: Getter Setter and Stack Overflow
+//Lec 48: Getter Setter and Stack Overflow  (A)
 
 class User {
     constructor(email, password){
