@@ -1,6 +1,7 @@
 //Lec 48: Getter Setter and Stack Overflow  (B)
 
 //----implementation of getter and setter jab classes nhi hoti thi----
+//using function
 
 function User(email, password){
     this._email = email;
