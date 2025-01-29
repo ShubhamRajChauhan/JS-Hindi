@@ -1,0 +1,111 @@
+<!-- Lec 49: Lexical scoping and Closure -->
+
+
+<!--
+
+Lexical scoping : 
+
+agr function ke under function ho(kitne v functions ho sakte hai) , to inner function ko outer function ke jitne v variables, ya jo v ho outer function ke under hai, un sab ki access milti hai 
+ 
+jo inner functions hai unke pass v ek dusre ka access nhi hai , bus wo outer function access kar sakte hai
+
+
+Closure: 
+jab aap ek pura ka pura function hi return kar dete ho, to sirf function return nhi hota , ushka pura scope return hota hai means Lexical scope
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+        //----------------Lexical scoping---------------------
+        // function init() {
+        //     let name = "Mozilla"; 
+        //     function displayName() {
+        //         console.log(name); 
+        //     }
+        //     displayName();
+        // }
+        // init();
+
+
+        // function outer(){
+        //     let username = "hitesh"
+        //     console.log("OUTER", secret);  //no access
+        //     function inner(){
+        //         let secret = "my123"
+        //         console.log("inner", username);
+        //     }
+        //     function innerTwo(){
+        //         console.log("innerTwo", username);
+        //         console.log(secret);  //no access
+        //     }
+        //     inner()
+        //     innerTwo()
+        // }
+        // outer()
+        // console.log("TOO OUTER", username); //no access
+
+
+
+        //---------------Closure---------------------
+        // function makeFunc() {
+        //     const name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;  //yahan sirf displayName hi return nhi hoga balki jo outer function ke under jo v hai , wo sab v return hoga
+        // }
+
+        // const myFunc = makeFunc();
+        // myFunc();
+
+    </script>
+    <script>
+        //--------------Practical Use----------------
+        //upr jo do button hai orange aur green , to jab orange button pr click ho then background color orange ho jaye and jab green button click ho to background color green ho jaye
+
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        //to ishme diqat ye aati hai ki agr 500 button diye ho to 500 baar copy paste krna hoga for different color
+
+
+        //to make the work simple -------
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`  //bina click kiye execute ho rha tha 
+
+            return function(){ //so use this 
+                document.body.style.backgroundColor = `${color}`  //ye jo function hai kya ushke pass jo outer function ke under color hai (clickHandler(color))  ushka access hai kya, haan hai agr aapko closure aur lexical scope ka concept pta hai to
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
+
+
+
+
+
+
+
